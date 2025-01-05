@@ -1,0 +1,13 @@
+# Initialize git in your project folder
+git init
+
+# Add all files
+git add .
+
+# Commit the files
+git commit -m "Initial commit"
+
+# Create a new repository on GitHub and link it
+git remote add origin https://github.com/husnawork/portfolio.git
+git branch -M main
+git push -u origin main
