@@ -1,8 +1,151 @@
-# Initialize new Vite + React project
-npm create vite@latest . -- --template react
+// src/index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-# Install dependencies
-npm install
-npm install lucide-react
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+// src/App.jsx
+import React from 'react';
+import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header Section */}
+      <header className="bg-white border-b">
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          <div className="flex flex-col md:flex-row items-start gap-6">
+            <div className="w-32 h-32 rounded-full bg-blue-100 flex items-center justify-center text-2xl font-bold text-blue-600">
+              NH
+            </div>
+            <div className="flex-1">
+              <h1 className="text-3xl font-bold text-gray-900">Nurul Husna Binti Azmi</h1>
+              <p className="text-lg text-gray-600 mt-2">Business and Marketing Manager | Mathematics and Economics Graduate</p>
+              <div className="flex items-center gap-2 mt-2 text-gray-600">
+                <MapPin size={18} />
+                <span>Simpang Ampat, Pulau Pinang, Malaysia</span>
+              </div>
+              <div className="flex gap-4 mt-4">
+                <a href="mailto:contact@husna.work" className="flex items-center gap-2 text-blue-600 hover:text-blue-700">
+                  <Mail size={18} />
+                  <span>Email</span>
+                </a>
+                <a href="#" className="flex items-center gap-2 text-blue-600 hover:text-blue-700">
+                  <Linkedin size={18} />
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/husnawork" className="flex items-center gap-2 text-blue-600 hover:text-blue-700">
+                  <Github size={18} />
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main className="max-w-4xl mx-auto px-4 py-8">
+        {/* Objective Section */}
+        <section className="bg-white rounded-lg p-6 shadow-sm mb-6">
+          <h2 className="text-xl font-semibold mb-4">Objective</h2>
+          <p className="text-gray-600">
+            A dedicated and results-driven professional with a passion for excellence in business management, strategic planning, and
+            operational innovation. Skilled in orchestrating complex projects from inception to successful completion, optimizing
+            resources, and driving profitability in dynamic environments.
+          </p>
+        </section>
+
+        {/* Experience Section */}
+        <section className="bg-white rounded-lg p-6 shadow-sm mb-6">
+          <h2 className="text-xl font-semibold mb-4">Experience</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="font-medium">Casual Employee</h3>
+              <p className="text-gray-600">Penang Marriot Hotel</p>
+              <p className="text-sm text-gray-500">Mar 2024 - Present</p>
+              <ul className="mt-2 space-y-1 text-gray-600 list-disc list-inside">
+                <li>Provided flexible and reliable support across various departments</li>
+                <li>Assisted with daily operations, including customer service and event setup</li>
+                <li>Demonstrated strong time management and multitasking abilities</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-medium">Business and Marketing Manager</h3>
+              <p className="text-gray-600">MrParcel@USM</p>
+              <p className="text-sm text-gray-500">September 2022 - December 2023</p>
+              <ul className="mt-2 space-y-1 text-gray-600 list-disc list-inside">
+                <li>Managed cross-functional teams</li>
+                <li>Established strong relationships with key stakeholders</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section className="bg-white rounded-lg p-6 shadow-sm mb-6">
+          <h2 className="text-xl font-semibold mb-4">Education</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-medium">University of Science Malaysia (USM)</h3>
+              <p className="text-gray-600">Applied Science (Mathematics and Economics)</p>
+              <p className="text-sm text-gray-500">October 2020 - August 2024</p>
+              <p className="text-gray-600">CGPA: 3.19</p>
+            </div>
+            <div>
+              <h3 className="font-medium">Kolej Matrikulasi Pulau Pinang (KMPP)</h3>
+              <p className="text-gray-600">Financial Accounting</p>
+              <p className="text-sm text-gray-500">May 2019 - May 2020</p>
+              <p className="text-gray-600">CGPA: 4.00</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section className="bg-white rounded-lg p-6 shadow-sm mb-6">
+          <h2 className="text-xl font-semibold mb-4">Skills</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-medium mb-2">Technical Skills</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Microsoft Office', 'Eviews', 'RStudio', 'Wolfram Mathematica', 'Canva', 'Filmora', 'Capcut'].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3 className="font-medium mb-2">Soft Skills</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Leadership', 'Communication', 'Teamwork', 'Adaptability', 'Problem Solving'].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Achievements Section */}
+        <section className="bg-white rounded-lg p-6 shadow-sm">
+          <h2 className="text-xl font-semibold mb-4">Achievements</h2>
+          <ul className="space-y-2 text-gray-600 list-disc list-inside">
+            <li>School of Mathematical Sciences Dean's List Semester 2 Academic Session 2022/2023</li>
+            <li>KRU Excellency Service Reward Academic Session 2023/2024</li>
+            <li>Passed Malaysian University English Test (MUET) with Band 4</li>
+            <li>Top 3 in Creative Innovation Competition</li>
+            <li>Financial Accounting Course Dean's List (2019/2020)</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer className="bg-white border-t mt-8">
+        <div className="max-w-4xl mx-auto px-4 py-6">
+          <p className="text-center text-gray-600">© 2024 Nurul Husna Binti Azmi. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default App;
