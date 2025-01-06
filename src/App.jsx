@@ -26,13 +26,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto px-8">
           {/* Profile Image - Positioned to overlap banner */}
           <div className="relative -mt-20 mb-4">
-            <img
-<<<<<<< HEAD
-              src="/images/profile.jpg"
-=======
-              src="https://drive.google.com/uc?export=view&id=1tG-ApabcLGQHCN87M25_q7_JwsurjibL"
->>>>>>> 4ac8d79e85d6bd4d1d1039ad93a042a051eb55e6
-              alt="Profile"
+            <img src="/images/profile.jpg" alt="Profile"
               className="w-36 h-36 rounded-full border-4 border-white shadow-lg object-cover"
             />
           </div>
