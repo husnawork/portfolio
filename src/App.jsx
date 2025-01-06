@@ -2,6 +2,20 @@ import React from 'react';
 import { Briefcase, GraduationCap, Award, Users, Mail, Phone, MapPin, UserCircle } from 'lucide-react';
 
 export default function App() {
+  // Section header component for consistent styling
+  const SectionHeader = ({ icon: Icon, title }) => (
+    <div className="border-b border-gray-200 pb-4 mb-6">
+      <div className="flex items-center gap-3">
+        <div className="bg-blue-50 p-2 rounded-lg">
+          <Icon className="text-blue-600 w-5 h-5" />
+        </div>
+        <h2 className="text-xl font-semibold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+          {title}
+        </h2>
+      </div>
+    </div>
+  );
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header/Profile Section with Banner and Image */}
@@ -45,7 +59,7 @@ export default function App() {
       <main className="max-w-4xl mx-auto py-8 px-4">
         {/* About Section */}
         <section className="bg-white rounded-lg shadow p-6 mb-6">
-          <h2 className="text-xl font-semibold mb-4">About</h2>
+          <SectionHeader icon={UserCircle} title="About" />
           <p className="text-gray-600">
             A dedicated and results-driven professional with a passion for excellence in business management, strategic planning, and
             operational innovation. Skilled in orchestrating complex projects from inception to successful completion, optimizing
@@ -55,11 +69,7 @@ export default function App() {
 
         {/* Experience Section */}
         <section className="bg-white rounded-lg shadow p-6 mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <Briefcase className="text-gray-600" />
-            <h2 className="text-xl font-semibold">Experience</h2>
-          </div>
-          
+          <SectionHeader icon={Briefcase} title="Experience" />
           <div className="space-y-6">
             <div>
               <h3 className="font-semibold">Casual Employee</h3>
@@ -86,11 +96,7 @@ export default function App() {
 
         {/* Education Section */}
         <section className="bg-white rounded-lg shadow p-6 mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <GraduationCap className="text-gray-600" />
-            <h2 className="text-xl font-semibold">Education</h2>
-          </div>
-          
+          <SectionHeader icon={GraduationCap} title="Education" />
           <div className="space-y-4">
             <div>
               <h3 className="font-semibold">University of Science Malaysia (USM)</h3>
@@ -103,11 +109,7 @@ export default function App() {
 
         {/* Skills Section */}
         <section className="bg-white rounded-lg shadow p-6 mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <Award className="text-gray-600" />
-            <h2 className="text-xl font-semibold">Skills</h2>
-          </div>
-          
+          <SectionHeader icon={Award} title="Skills" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <h3 className="font-semibold mb-2">Technical</h3>
@@ -135,11 +137,7 @@ export default function App() {
 
         {/* Activities Section */}
         <section className="bg-white rounded-lg shadow p-6 mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <Users className="text-gray-600" />
-            <h2 className="text-xl font-semibold">Leadership & Activities</h2>
-          </div>
-          
+          <SectionHeader icon={Users} title="Leadership & Activities" />
           <ul className="space-y-2 text-gray-600">
             <li>• Exco of USM Math Society (2022-2023)</li>
             <li>• Vice Project Director of KRU Outdoor Safety Seminar (2024)</li>
@@ -150,11 +148,7 @@ export default function App() {
 
         {/* References Section */}
         <section className="bg-white rounded-lg shadow p-6">
-          <div className="flex items-center gap-2 mb-4">
-            <UserCircle className="text-gray-600" />
-            <h2 className="text-xl font-semibold">References</h2>
-          </div>
-          
+          <SectionHeader icon={UserCircle} title="References" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <h3 className="font-semibold">Dr. Nurul Syafiah Binti Abd Naeeim</h3>
