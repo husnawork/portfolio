@@ -1,5 +1,14 @@
-import React from 'react';
-import { Briefcase, GraduationCap, Award, Users, Mail, Phone, MapPin, UserCircle } from 'lucide-react';
+import React from "react";
+import {
+  Briefcase,
+  GraduationCap,
+  Award,
+  Users,
+  Mail,
+  Phone,
+  MapPin,
+  UserCircle,
+} from "lucide-react";
 
 export default function App() {
   // Section header component for consistent styling
@@ -22,24 +31,35 @@ export default function App() {
       <div className="bg-white shadow">
         {/* Banner Background */}
         <div className="h-40 bg-gradient-to-r from-blue-600 to-blue-800"></div>
-        
+
         <div className="max-w-4xl mx-auto px-8">
           {/* Profile Image - Positioned to overlap banner */}
           <div className="relative -mt-20 mb-4">
-            <img src="/images/profile.jpg" alt="Profile"
+            <img
+              src="/images/profile.jpg"
+              alt="Profile"
               className="w-36 h-36 rounded-full border-4 border-white shadow-lg object-cover"
             />
           </div>
 
           {/* Profile Info */}
           <div className="pb-8">
-            <h1 className="text-3xl font-bold text-gray-900">Nurul Husna Binti Azmi</h1>
-            <p className="mt-2 text-lg text-gray-600">Applied Science (Mathematics and Economics) Graduate</p>
-            
+            <h1 className="text-3xl font-bold text-gray-900">
+              Nurul Husna Binti Azmi
+            </h1>
+            <p className="mt-2 text-lg text-gray-600">
+              Applied Science (Mathematics and Economics) Graduate
+            </p>
+
             <div className="mt-4 flex flex-wrap gap-4 text-gray-600">
               <div className="flex items-center gap-2">
                 <Mail size={18} />
-                <a href="mailto:contact@husna.work" className="hover:text-blue-600">contact@husna.work</a>
+                <a
+                  href="mailto:contact@husna.work"
+                  className="hover:text-blue-600"
+                >
+                  contact@husna.work
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={18} />
@@ -59,9 +79,11 @@ export default function App() {
         <section className="bg-white rounded-lg shadow p-6 mb-6">
           <SectionHeader icon={UserCircle} title="About" />
           <p className="text-gray-600">
-            A dedicated and results-driven professional with a passion for excellence in business management, strategic planning, and
-            operational innovation. Skilled in orchestrating complex projects from inception to successful completion, optimizing
-            resources, and driving profitability in dynamic environments.
+            A dedicated and results-driven professional with a passion for
+            excellence in business management, strategic planning, and
+            operational innovation. Skilled in orchestrating complex projects
+            from inception to successful completion, optimizing resources, and
+            driving profitability in dynamic environments.
           </p>
         </section>
 
@@ -83,10 +105,38 @@ export default function App() {
             <div>
               <h3 className="font-semibold">Business and Marketing Manager</h3>
               <p className="text-gray-600">MrParcel@USM</p>
-              <p className="text-sm text-gray-500">September 2022 - December 2023</p>
+              <p className="text-sm text-gray-500">
+                September 2022 - December 2023
+              </p>
               <ul className="mt-2 list-disc list-inside text-gray-600">
-                <li>Managed cross-functional teams aligning business objectives</li>
+                <li>
+                  Managed cross-functional teams aligning business objectives
+                </li>
                 <li>Established strong relationships with key stakeholders</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold">Tuition Teacher</h3>
+              <p className="text-gray-600">
+                Advanced Support Education Solutions (ASES)
+              </p>
+              <p className="text-sm text-gray-500">
+                June 2022 - September 2022
+              </p>
+              <ul className="mt-2 list-disc list-inside text-gray-600">
+                <li>
+                  Provided tutoring sessions for students in Mathematics across
+                  educational levels of secondary and high school
+                </li>
+                <li>
+                  Developed customized lesson plans and learning materials
+                  tailored to individual student needs, helping them to improve
+                  understanding, performance, and confidence.
+                </li>
+                <li>
+                  Maintained up-to-date knowledge of the curriculum and
+                  education trends to ensure relevant and effective instruction.
+                </li>
               </ul>
             </div>
           </div>
@@ -97,10 +147,34 @@ export default function App() {
           <SectionHeader icon={GraduationCap} title="Education" />
           <div className="space-y-4">
             <div>
-              <h3 className="font-semibold">University of Science Malaysia (USM)</h3>
-              <p className="text-gray-600">Applied Science (Mathematics and Economics)</p>
-              <p className="text-sm text-gray-500">October 2020 - August 2024</p>
+              <h3 className="font-semibold">
+                University of Science Malaysia (USM)
+              </h3>
+              <p className="text-gray-600">
+                Applied Science (Mathematics and Economics)
+              </p>
+              <p className="text-sm text-gray-500">
+                October 2020 - August 2024
+              </p>
               <p className="text-gray-600">CGPA: 3.19</p>
+            </div>
+            <div>
+              <h3 className="font-semibold">
+                Kolej Matrikulasi Pulau Pinang (KMPP)
+              </h3>
+              <p className="text-gray-600">Financial Accounting</p>
+              <p className="text-sm text-gray-500">May 2019 - May 202</p>
+              <p className="text-gray-600">CGPA: 4.00</p>
+            </div>
+            <div>
+              <h3 className="font-semibold">
+                Sekolah Menengah Teknik Tunku Abdul Rahman Putra (SMT TARP)
+              </h3>
+              <p className="text-gray-600">Sijil Pelajaran Malaysia (SPM)</p>
+              <p className="text-sm text-gray-500">
+                January 2017 - December 2018
+              </p>
+              <p className="text-gray-600">Result: 3A - 6B - 1C</p>
             </div>
           </div>
         </section>
@@ -112,19 +186,32 @@ export default function App() {
             <div>
               <h3 className="font-semibold mb-2">Technical</h3>
               <div className="flex flex-wrap gap-2">
-                {['Mathematica', 'Microsoft Office', 'Eviews'].map((skill) => (
-                  <span key={skill} className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm">
-                    {skill}
-                  </span>
-                ))}
+                {["Mathematica", "Microsoft Office", "Eviews", "Canva"].map(
+                  (skill) => (
+                    <span
+                      key={skill}
+                      className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm"
+                    >
+                      {skill}
+                    </span>
+                  )
+                )}
               </div>
             </div>
-            
+
             <div>
               <h3 className="font-semibold mb-2">Soft Skills</h3>
               <div className="flex flex-wrap gap-2">
-                {['Leadership', 'Team Management', 'Problem Solving', 'Communication'].map((skill) => (
-                  <span key={skill} className="bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm">
+                {[
+                  "Leadership",
+                  "Team Management",
+                  "Problem Solving",
+                  "Communication",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="bg-green-50 text-green-600 px-3 py-1 rounded-full text-sm"
+                  >
                     {skill}
                   </span>
                 ))}
@@ -138,7 +225,9 @@ export default function App() {
           <SectionHeader icon={Users} title="Leadership & Activities" />
           <ul className="space-y-2 text-gray-600">
             <li>• Exco of USM Math Society (2022-2023)</li>
-            <li>• Vice Project Director of KRU Outdoor Safety Seminar (2024)</li>
+            <li>
+              • Vice Project Director of KRU Outdoor Safety Seminar (2024)
+            </li>
             <li>• Coordinator of USM Mathematics Quiz Competition</li>
             <li>• Entrepreneur of USM Incubator (MrParcel@USM)</li>
           </ul>
@@ -149,7 +238,9 @@ export default function App() {
           <SectionHeader icon={UserCircle} title="References" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <h3 className="font-semibold">Dr. Nurul Syafiah Binti Abd Naeeim</h3>
+              <h3 className="font-semibold">
+                Dr. Nurul Syafiah Binti Abd Naeeim
+              </h3>
               <p className="text-gray-600">Academic Advisor/ Lecturer</p>
               <p className="text-gray-600">Mathematical Sciences Department</p>
               <p className="text-gray-600">University of Science Malaysia</p>
@@ -159,14 +250,19 @@ export default function App() {
               </div>
               <div className="flex items-center gap-2 text-gray-600">
                 <Mail size={16} />
-                <a href="mailto:nsyafiah@usm.my" className="text-blue-600 hover:underline">
+                <a
+                  href="mailto:nsyafiah@usm.my"
+                  className="text-blue-600 hover:underline"
+                >
                   nsyafiah@usm.my
                 </a>
               </div>
             </div>
 
             <div className="space-y-2">
-              <h3 className="font-semibold">Pn. Ferinazulia Binti Abdul Kairm</h3>
+              <h3 className="font-semibold">
+                Pn. Ferinazulia Binti Abdul Kairm
+              </h3>
               <p className="text-gray-600">Staff in BHEPA USM</p>
               <p className="text-gray-600">BHEPA Main Campus Department</p>
               <p className="text-gray-600">University of Science Malaysia</p>
@@ -176,7 +272,10 @@ export default function App() {
               </div>
               <div className="flex items-center gap-2 text-gray-600">
                 <Mail size={16} />
-                <a href="mailto:ferinazulia@usm.my" className="text-blue-600 hover:underline">
+                <a
+                  href="mailto:ferinazulia@usm.my"
+                  className="text-blue-600 hover:underline"
+                >
                   ferinazulia@usm.my
                 </a>
               </div>
