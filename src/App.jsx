@@ -13,7 +13,7 @@ export default function App() {
           {/* Profile Image - Positioned to overlap banner */}
           <div className="relative -mt-20 mb-4">
             <img
-              src="/src/images/profile.jpg"
+              src="/public/profile.jpg"
               alt="Profile"
               className="w-36 h-36 rounded-full border-4 border-white shadow-lg object-cover"
             />
